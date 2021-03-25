@@ -8,7 +8,7 @@ public class Parcial_2_juanP_OrlandoC {
     public static void main(String[] args) {
         
         
-        //prueba a ver si te llega el mensaje Perez
+        //prueba a ver si te llega el mensaje Perez g
         
         
     }

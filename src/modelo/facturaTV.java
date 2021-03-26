@@ -6,9 +6,42 @@
 package modelo;
 
 
-public class facturaTV {
+public class facturaTV extends factura{
     
     private tv articuloTV;
+
+    public facturaTV(tv articuloTV, int numero, double descuento) {
+        super(numero, descuento);
+        this.articuloTV = articuloTV;
+    }
+
+    public tv getArticuloTV() {
+        return articuloTV;
+    }
+
+    public void setArticuloTV(tv articuloTV) {
+        this.articuloTV = articuloTV;
+    }
+
+    @Override
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    @Override
+    public double getDescuento() {
+        return descuento;
+    }
+
+    @Override
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
+    }
+    
     
     
 }

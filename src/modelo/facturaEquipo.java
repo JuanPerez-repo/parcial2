@@ -6,9 +6,43 @@
 package modelo;
 
 
-public class facturaEquipo {
+public class facturaEquipo extends factura{
     
     private equipo articuloEquipo;
+
+    public facturaEquipo(equipo articuloEquipo, int numero, double descuento) {
+        super(numero, descuento);
+        this.articuloEquipo = articuloEquipo;
+    }
+
+    public equipo getArticuloEquipo() {
+        return articuloEquipo;
+    }
+
+    public void setArticuloEquipo(equipo articuloEquipo) {
+        this.articuloEquipo = articuloEquipo;
+    }
+
+    @Override
+    public int getNumero() {
+        return numero;
+    }
+
+    @Override
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    @Override
+    public double getDescuento() {
+        return descuento;
+    }
+
+    @Override
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
+    }
+    
     
     
 }

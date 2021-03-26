@@ -5,8 +5,23 @@
  */
 package modelo;
 
-public class iPod {
+public class iPod extends aparato{
     
     private String capacidad;
+
+    public iPod(String capacidad, double precio, int voltaje, double descuento) {
+        super(precio, voltaje, descuento);
+        this.capacidad = capacidad;
+    }
+
+    public String getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(String capacidad) {
+        this.capacidad = capacidad;
+    }
+    
+    
     
 }

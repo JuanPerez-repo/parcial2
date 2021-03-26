@@ -2,7 +2,7 @@
 package modelo;
 
 
-public class aparato {
+public abstract class aparato {
     
     private double precio;
     private int voltaje;

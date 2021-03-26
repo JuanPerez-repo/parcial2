@@ -17,7 +17,7 @@ public class View extends javax.swing.JFrame {
     public View() {
         initComponents();
         
-        this.setLocationRelativeTo(null);
+        //this.setLocationRelativeTo(null);
         
         
     }
@@ -265,7 +265,7 @@ public class View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBotonComprar;
+    public javax.swing.JButton jBotonComprar;
     private javax.swing.JButton jBotonSeleccionar;
     public javax.swing.JComboBox<String> jComboCapacidadipod;
     public javax.swing.JComboBox<String> jComboEquipo;

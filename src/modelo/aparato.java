@@ -2,20 +2,16 @@
 package modelo;
 
 
-public abstract class aparato {
+public class aparato {
     
     private double precio;
     private int voltaje;
     private double descuento;
 
-    public aparato(double precio, int voltaje, double descuento) {
-        this.precio = precio;
-        this.voltaje = voltaje;
-        this.descuento = descuento;
+    public aparato() {
+
     }
     
-    
-
     public double getPrecio() {
         return precio;
     }
@@ -51,8 +47,19 @@ public abstract class aparato {
         return precio;
         }
         
-
     }
+    
+    public void establecer(int voltaje, double precio){
+                
+        this.voltaje = voltaje;
+        
+        this.precio = precio;
+        
+    }
+    
+    public void imprimir(){}; //mucho ojo, puede que no agarre todos los tipos de datos por ser un metodo tipo String 
+        
+    public void capturar(){}; //mucho ojo, puede que no agarre todos los tipos de datos por ser un metodo tipo String    
     
     
 }

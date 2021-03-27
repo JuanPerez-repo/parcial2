@@ -1,20 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package modelo;
 
+package modelo;
+import javax.swing.*;
 
 public class facturaTV extends factura{
     
     private tv articuloTV;
 
-    public facturaTV(tv articuloTV, int numero, double descuento) {
-        super(numero, descuento);
-        this.articuloTV = articuloTV;
+    public facturaTV() {
+        
+    }
+    
+    public void establecer(int voltaje, tv tv , double precio){
+        
+        articuloTV = tv;
+        
+        articuloTV.setPrecio(precio);
+        
+        articuloTV.setVoltaje(voltaje);
+        
+        
+        
+    }
+    
+    @Override
+    public void imprimir(){
+        
+        JOptionPane.showMessageDialog(null,"Descuento: "+super.getDescuento()+" % "
+                + "\n precio original: "+ articuloTV.getPrecio()
+                //+"\n precio final: "+(articuloTV.calcularDescuento(super.getDescuento())
+                + "\n voltaje: "+articuloTV.getVoltaje()
+                + "\n tamaño: "+articuloTV.getTamano());
     }
 
+     @Override
+    public void capturar(){
+        
+        
+    } //no sé con exactitud qué retornar
+    
     public tv getArticuloTV() {
         return articuloTV;
     }
@@ -23,25 +46,4 @@ public class facturaTV extends factura{
         this.articuloTV = articuloTV;
     }
 
-    @Override
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    @Override
-    public double getDescuento() {
-        return descuento;
-    }
-
-    @Override
-    public void setDescuento(double descuento) {
-        this.descuento = descuento;
-    }
-    
-    
-    
 }

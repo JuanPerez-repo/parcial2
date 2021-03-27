@@ -1,18 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package modelo;
 
+package modelo;
+import javax.swing.*;
 
 public class tv extends aparato{
     
  private String tamano;
 
-    public tv(String tamano, double precio, int voltaje, double descuento) {
-        super(precio, voltaje, descuento);
-        this.tamano = tamano;
+    public tv() {
+        
     }
 
     public String getTamano() {
@@ -22,7 +17,36 @@ public class tv extends aparato{
     public void setTamano(String tamano) {
         this.tamano = tamano;
     }
+
+
+    @Override
+    public void imprimir() {
+         
+        JOptionPane.showMessageDialog(null,"El televisor tiene un tamaño: "+tamano); 
+        
+    }
+    //no sé con exactitud qué retornar
+
+    @Override
+    public void capturar() {
+        
+    }
+    //no sé con exactitud qué retornar
+    
+     
+    
+    
+    }
+
+    
+
+   
+   
+
+   
+    
+    
+
     
  
- 
-}
+

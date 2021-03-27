@@ -5,14 +5,15 @@
  */
 package modelo;
 
+import javax.swing.*;
+
 
 public class facturaIPod extends factura{
     
     private iPod articuloIPod;
 
-    public facturaIPod(iPod articuloIPod, int numero, double descuento) {
-        super(numero, descuento);
-        this.articuloIPod = articuloIPod;
+    public facturaIPod() {
+       
     }
 
     public iPod getArticuloIPod() {
@@ -23,26 +24,36 @@ public class facturaIPod extends factura{
         this.articuloIPod = articuloIPod;
     }
 
-    @Override
-    public int getNumero() {
-        return numero;
-    }
-
-    @Override
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    @Override
-    public double getDescuento() {
-        return descuento;
-    }
-
-    @Override
-    public void setDescuento(double descuento) {
-        this.descuento = descuento;
+    public void establecer(int voltaje, iPod ipod, double precio){
+        
+        articuloIPod = ipod;
+        
+        articuloIPod.setPrecio(precio);
+        
+        articuloIPod.setVoltaje(voltaje);
+        
     }
     
     
+    @Override
+    public void imprimir(){
+        
+        JOptionPane.showMessageDialog(null,"Descuento del Ipod: "+super.getDescuento()+" % "
+                + "\n precio original: "+ articuloIPod.getPrecio()
+                //+"\n precio final: "+(articuloTV.calcularDescuento(super.getDescuento())
+                + "\n voltaje: "+articuloIPod.getVoltaje()
+                + "\n capacidad: "+articuloIPod.getCapacidad());
+        
+    }
+    //no sé con exactitud qué retornar
+    
+    @Override
+    public void capturar(){
+        
+        
+    }
+    //no sé con exactitud qué retornar
+    
+   
     
 }

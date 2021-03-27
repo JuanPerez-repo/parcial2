@@ -4,15 +4,16 @@
  * and open the template in the editor.
  */
 package modelo;
+import javax.swing.*;
+import javax.swing.JOptionPane;
 
 
 public class facturaEquipo extends factura{
     
     private equipo articuloEquipo;
 
-    public facturaEquipo(equipo articuloEquipo, int numero, double descuento) {
-        super(numero, descuento);
-        this.articuloEquipo = articuloEquipo;
+    public facturaEquipo() {
+       
     }
 
     public equipo getArticuloEquipo() {
@@ -23,26 +24,36 @@ public class facturaEquipo extends factura{
         this.articuloEquipo = articuloEquipo;
     }
 
-    @Override
-    public int getNumero() {
-        return numero;
-    }
-
-    @Override
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    @Override
-    public double getDescuento() {
-        return descuento;
-    }
-
-    @Override
-    public void setDescuento(double descuento) {
-        this.descuento = descuento;
+    
+    public void establecer (int voltaje, equipo equipo, double precio){
+        
+        articuloEquipo = equipo;
+        
+        articuloEquipo.setPrecio(precio);
+        
+        articuloEquipo.setVoltaje(voltaje);
+        
     }
     
+    
+    @Override
+    public void imprimir(){
+        
+        JOptionPane.showMessageDialog(null,"Descuento: "+super.getDescuento()+" % "
+                + "\n precio original: "+ articuloEquipo.getPrecio()
+                //+"\n precio final: "+(articuloTV.calcularDescuento(super.getDescuento())
+                + "\n voltaje: "+articuloEquipo.getVoltaje()
+                + "\n tamaño: "+articuloEquipo.getCantidadCDs());
+        
+    }
+  
+    
+    @Override
+    public void capturar(){
+        
+        
+    }
+    //no sé con exactitud qué retornar
     
     
 }

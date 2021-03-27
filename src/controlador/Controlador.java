@@ -47,6 +47,17 @@ public class Controlador implements ActionListener{
         modelo.setPesos(Double.parseDouble(vista.jTextPeso.getText()));
         modelo.convertirDolares();
         vista.jTextDolar.setText(String.valueOf(modelo.getDolares()));
+        }else{
+            
+            switch(vista.jComboEquipo.getSelectedIndex()){
+                
+                case 0: 
+                 
+                    equipo.setCantidadCDs(Integer.parseInt(vista.));
+                    
+                
+            }
+            
         }
 
 

@@ -1,17 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo;
+
+import javax.swing.JOptionPane;
 
 public class iPod extends aparato{
     
     private String capacidad;
 
-    public iPod(String capacidad, double precio, int voltaje, double descuento) {
-        super(precio, voltaje, descuento);
-        this.capacidad = capacidad;
+    public iPod() {
+       
     }
 
     public String getCapacidad() {
@@ -21,7 +18,23 @@ public class iPod extends aparato{
     public void setCapacidad(String capacidad) {
         this.capacidad = capacidad;
     }
+
     
+
+    @Override
+    public void imprimir() {
+        
+        JOptionPane.showMessageDialog(null,"El Ipod tiene una capacidad de:"+capacidad);
+        
+    }
+    //no sé con exactitud qué retornar
+
+    @Override
+    public void capturar() {
+       
+    }
+    //no sé con exactitud qué retornar
     
+     
     
 }

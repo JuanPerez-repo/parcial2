@@ -22,16 +22,16 @@ public class tv extends aparato{
     @Override
     public void imprimir() {
          
-        JOptionPane.showMessageDialog(null,"El televisor tiene un tamaño: "+tamano); 
+        JOptionPane.showMessageDialog(null,"El televisor tiene un tamaño de: "+tamano); 
         
     }
-    //no sé con exactitud qué retornar
+    
 
     @Override
     public void capturar() {
         
     }
-    //no sé con exactitud qué retornar
+    
     
      
     

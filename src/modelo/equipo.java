@@ -20,7 +20,7 @@ public class equipo extends aparato{
     @Override
     public void imprimir() {
          
-        JOptionPane.showMessageDialog(null,"El equipo de sonido tiene "+cantidadCDs+" de CDs ");
+        JOptionPane.showMessageDialog(null,"El equipo de sonido puede almacenar"+cantidadCDs+" CDs ");
         
     }
 

@@ -25,9 +25,10 @@ public class facturaTV extends factura{
     @Override
     public void imprimir(){
         
-        JOptionPane.showMessageDialog(null,"Descuento: "+super.getDescuento()+" % "
+        JOptionPane.showMessageDialog(null,"Aparato comprado: TV\nNúmero de factura: "+super.getNumero()
+                + "\n Descuento: "+super.getDescuento()+" % "
                 + "\n precio original: "+ articuloTV.getPrecio()
-                //+"\n precio final: "+(articuloTV.calcularDescuento(super.getDescuento())
+                + "\n precio final: "+articuloTV.calcularDescuento(super.getDescuento())
                 + "\n voltaje: "+articuloTV.getVoltaje()
                 + "\n tamaño: "+articuloTV.getTamano());
     }
@@ -36,7 +37,7 @@ public class facturaTV extends factura{
     public void capturar(){
         
         
-    } //no sé con exactitud qué retornar
+    } 
     
     public tv getArticuloTV() {
         return articuloTV;

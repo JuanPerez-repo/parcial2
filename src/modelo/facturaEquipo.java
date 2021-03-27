@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo;
 import javax.swing.*;
 import javax.swing.JOptionPane;
@@ -16,13 +12,7 @@ public class facturaEquipo extends factura{
        
     }
 
-    public equipo getArticuloEquipo() {
-        return articuloEquipo;
-    }
 
-    public void setArticuloEquipo(equipo articuloEquipo) {
-        this.articuloEquipo = articuloEquipo;
-    }
 
     
     public void establecer (int voltaje, equipo equipo, double precio){
@@ -39,11 +29,12 @@ public class facturaEquipo extends factura{
     @Override
     public void imprimir(){
         
-        JOptionPane.showMessageDialog(null,"Descuento: "+super.getDescuento()+" % "
+        JOptionPane.showMessageDialog(null,"Aparato comprado: Equipo de sonidos\nNúmero de factura: "+super.getNumero()
+                + "\n Descuento: "+super.getDescuento()+" % "
                 + "\n precio original: "+ articuloEquipo.getPrecio()
-                //+"\n precio final: "+(articuloTV.calcularDescuento(super.getDescuento())
+                + "\n precio final: "+articuloEquipo.calcularDescuento(super.getDescuento())
                 + "\n voltaje: "+articuloEquipo.getVoltaje()
-                + "\n tamaño: "+articuloEquipo.getCantidadCDs());
+                + "\n Cantidad de CD's: "+articuloEquipo.getCantidadCDs());
         
     }
   
@@ -53,7 +44,7 @@ public class facturaEquipo extends factura{
         
         
     }
-    //no sé con exactitud qué retornar
+    
     
     
 }

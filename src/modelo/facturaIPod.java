@@ -38,21 +38,22 @@ public class facturaIPod extends factura{
     @Override
     public void imprimir(){
         
-        JOptionPane.showMessageDialog(null,"Descuento del Ipod: "+super.getDescuento()+" % "
+        JOptionPane.showMessageDialog(null,"Aparato comprado: iPod\nNúmero de factura: "+super.getNumero()
+                + "\n Descuento del Ipod: "+super.getDescuento()+" % "
                 + "\n precio original: "+ articuloIPod.getPrecio()
-                //+"\n precio final: "+(articuloTV.calcularDescuento(super.getDescuento())
+                + "\n precio final: "+articuloIPod.calcularDescuento(super.getDescuento())
                 + "\n voltaje: "+articuloIPod.getVoltaje()
                 + "\n capacidad: "+articuloIPod.getCapacidad());
         
     }
-    //no sé con exactitud qué retornar
+    
     
     @Override
     public void capturar(){
         
         
     }
-    //no sé con exactitud qué retornar
+   
     
    
     

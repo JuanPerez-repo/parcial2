@@ -36,13 +36,13 @@ public class aparato {
         this.descuento = descuento;
     }
     
-    public double calcularDescuento (){ 
+    public double calcularDescuento (double descuento){ 
         
         if (descuento <= 0){
             return precio;
         } else {
         double desc = descuento/100;
-        precio = precio / desc;
+        precio = precio * desc;
         
         return precio;
         }

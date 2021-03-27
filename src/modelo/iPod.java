@@ -27,13 +27,13 @@ public class iPod extends aparato{
         JOptionPane.showMessageDialog(null,"El Ipod tiene una capacidad de:"+capacidad);
         
     }
-    //no sé con exactitud qué retornar
+    
 
     @Override
     public void capturar() {
        
     }
-    //no sé con exactitud qué retornar
+    
     
      
     
